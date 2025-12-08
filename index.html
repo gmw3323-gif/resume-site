@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier Resume Services</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Site Header -->
+    <header>
+        <div class="container">
+            <!-- Logo / Site Name -->
+            <h1 class="logo">Premier Resume Services</h1>
+            <!-- Primary navigation with anchor links to each section -->
+            <nav>
+                <ul class="nav">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#samples">Samples &amp; Testimonials</a></li>
+                    <li><a href="#contact">Get&nbsp;Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section: introduces the service with a call‑to‑action -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Stand Out With a Professional Resume</h2>
+                <p>We craft resumes that showcase your skills, accomplishments and story, helping you land interviews faster.</p>
+                <a href="#contact" class="cta-btn">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <!-- Decorative illustration generated via the image tool -->
+                <img src="hero.png" alt="Illustration of a resume and pen">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section: highlight the key offerings -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Resume Writing</h3>
+                    <p>Personalized resumes written by industry experts, tailored for your target roles and optimized for applicant tracking systems (ATS).</p>
+                </div>
+                <div class="card">
+                    <h3>Cover Letter</h3>
+                    <p>Compelling cover letters that complement your resume and highlight your unique value proposition to hiring managers.</p>
+                </div>
+                <div class="card">
+                    <h3>LinkedIn Optimization</h3>
+                    <p>Enhance your online presence with a professional LinkedIn profile that attracts recruiters and hiring managers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section: outline packages and pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Pricing</h2>
+            <div class="pricing-tables">
+                <!-- Basic package -->
+                <div class="pricing-option">
+                    <h3>Basic</h3>
+                    <p class="price">$99</p>
+                    <ul>
+                        <li>ATS‑friendly resume</li>
+                        <li>One revision</li>
+                        <li>Delivery within 5 business days</li>
+                    </ul>
+                </div>
+                <!-- Professional package -->
+                <div class="pricing-option">
+                    <h3>Professional</h3>
+                    <p class="price">$199</p>
+                    <ul>
+                        <li>ATS‑friendly resume</li>
+                        <li>Cover letter</li>
+                        <li>Two revisions</li>
+                        <li>Delivery within 3 business days</li>
+                    </ul>
+                </div>
+                <!-- Premium package -->
+                <div class="pricing-option">
+                    <h3>Premium</h3>
+                    <p class="price">$299</p>
+                    <ul>
+                        <li>ATS‑friendly resume</li>
+                        <li>Cover letter</li>
+                        <li>LinkedIn optimization</li>
+                        <li>Unlimited revisions within 10 days</li>
+                        <li>Priority delivery within 2 business days</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Samples and Testimonials Section: build trust with potential clients -->
+    <section id="samples" class="samples">
+        <div class="container">
+            <h2>Samples &amp; Testimonials</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>“Thanks to Premier Resume Services, I landed interviews within a week. The resume highlighted my achievements clearly and professionally.”</p>
+                    <span>— Sarah M., Marketing Professional</span>
+                </div>
+                <div class="testimonial">
+                    <p>“The team completely revamped my resume and LinkedIn profile. I saw a huge increase in recruiter responses!”</p>
+                    <span>— James L., Sales Executive</span>
+                </div>
+                <div class="testimonial">
+                    <p>“I highly recommend their services! The cover letter captured my voice perfectly and complemented my resume.”</p>
+                    <span>— Lisa R., Project Manager</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section: order form for new clients -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get Started</h2>
+            <p>Please fill out the form below to request your resume service. We'll respond within one business day.</p>
+            <form action="mailto:contact@example.com" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="job-title">Target Job Title *</label>
+                    <input type="text" id="job-title" name="job_title" required>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industry / Career Level *</label>
+                    <input type="text" id="industry" name="industry" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Current Resume (optional: PDF, DOC or DOCX)</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                </div>
+                <button type="submit" class="cta-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Premier Resume Services. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
