@@ -6,6 +6,10 @@
     <title>Premier Resume Services</title>
     <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Snipcart styles and preconnect hints for shopping cart -->
+    <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://cdn.snipcart.com">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css">
 </head>
 <body>
     <!-- Site Header -->
@@ -75,6 +79,15 @@
                         <li>One revision</li>
                         <li>Delivery within 5 business days</li>
                     </ul>
+                    <!-- Snipcart add-to-cart button for Basic package -->
+                    <button class="snipcart-add-item cta-btn"
+                            data-item-id="resume-basic"
+                            data-item-name="Basic Resume Package"
+                            data-item-price="99.00"
+                            data-item-description="ATS‑friendly resume; one revision; delivered in 5 business days"
+                            data-item-shippable="false">
+                        Add to Cart
+                    </button>
                 </div>
                 <!-- Professional package -->
                 <div class="pricing-option">
@@ -86,6 +99,15 @@
                         <li>Two revisions</li>
                         <li>Delivery within 3 business days</li>
                     </ul>
+                    <!-- Snipcart add-to-cart button for Professional package -->
+                    <button class="snipcart-add-item cta-btn"
+                            data-item-id="resume-professional"
+                            data-item-name="Professional Resume Package"
+                            data-item-price="199.00"
+                            data-item-description="ATS‑friendly resume; cover letter; two revisions; delivered in 3 business days"
+                            data-item-shippable="false">
+                        Add to Cart
+                    </button>
                 </div>
                 <!-- Premium package -->
                 <div class="pricing-option">
@@ -98,6 +120,15 @@
                         <li>Unlimited revisions within 10 days</li>
                         <li>Priority delivery within 2 business days</li>
                     </ul>
+                    <!-- Snipcart add-to-cart button for Premium package -->
+                    <button class="snipcart-add-item cta-btn"
+                            data-item-id="resume-premium"
+                            data-item-name="Premium Resume Package"
+                            data-item-price="299.00"
+                            data-item-description="ATS‑friendly resume; cover letter; LinkedIn optimization; unlimited revisions within 10 days; priority delivery in 2 business days"
+                            data-item-shippable="false">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
         </div>
@@ -165,5 +196,12 @@
             <p>&copy; 2025 Premier Resume Services. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Snipcart JavaScript and cart container (replace YOUR_PUBLIC_API_KEY with your Snipcart key) -->
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div id="snipcart"
+         data-config-modal-style="side"
+         data-api-key="YOUR_PUBLIC_API_KEY"
+         hidden></div>
 </body>
 </html>
