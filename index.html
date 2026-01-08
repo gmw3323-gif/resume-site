@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,12 +78,7 @@
                         <li>Delivery within 5 business days</li>
                     </ul>
                     <!-- Snipcart add-to-cart button for Basic package -->
-                    <button class="snipcart-add-item cta-btn"
-                            data-item-id="resume-basic"
-                            data-item-name="Basic Resume Package"
-                            data-item-price="99.00"
-                            data-item-description="ATS‑friendly resume; one revision; delivered in 5 business days"
-                            data-item-shippable="false">
+                    <button class="snipcart-add-item cta-btn" data-item-id="resume-basic" data-item-name="Basic Resume Package" data-item-price="99.00" data-item-description="ATS‑friendly resume; one revision; delivered in 5 business days" data-item-shippable="false">
                         Add to Cart
                     </button>
                 </div>
@@ -100,12 +93,7 @@
                         <li>Delivery within 3 business days</li>
                     </ul>
                     <!-- Snipcart add-to-cart button for Professional package -->
-                    <button class="snipcart-add-item cta-btn"
-                            data-item-id="resume-professional"
-                            data-item-name="Professional Resume Package"
-                            data-item-price="199.00"
-                            data-item-description="ATS‑friendly resume; cover letter; two revisions; delivered in 3 business days"
-                            data-item-shippable="false">
+                    <button class="snipcart-add-item cta-btn" data-item-id="resume-professional" data-item-name="Professional Resume Package" data-item-price="199.00" data-item-description="ATS‑friendly resume; cover letter; two revisions; delivered in 3 business days" data-item-shippable="false">
                         Add to Cart
                     </button>
                 </div>
@@ -121,12 +109,7 @@
                         <li>Priority delivery within 2 business days</li>
                     </ul>
                     <!-- Snipcart add-to-cart button for Premium package -->
-                    <button class="snipcart-add-item cta-btn"
-                            data-item-id="resume-premium"
-                            data-item-name="Premium Resume Package"
-                            data-item-price="299.00"
-                            data-item-description="ATS‑friendly resume; cover letter; LinkedIn optimization; unlimited revisions within 10 days; priority delivery in 2 business days"
-                            data-item-shippable="false">
+                    <button class="snipcart-add-item cta-btn" data-item-id="resume-premium" data-item-name="Premium Resume Package" data-item-price="299.00" data-item-description="ATS‑friendly resume; cover letter; LinkedIn optimization; unlimited revisions within 10 days; priority delivery in 2 business days" data-item-shippable="false">
                         Add to Cart
                     </button>
                 </div>
@@ -160,26 +143,36 @@
         <div class="container">
             <h2>Get Started</h2>
             <p>Please fill out the form below to request your resume service. We'll respond within one business day.</p>
-            <form action="mailto:contact@example.com" method="post" enctype="multipart/form-data">
+            <!--
+                We changed the form action from an insecure "mailto:" to the secure
+                FormSubmit endpoint. This prevents Chrome from showing the
+                “This form is not secure. Autofill has been turned off.” warning.
+                Submissions will be emailed directly to gmw72@yahoo.com.
+            -->
+            <form action="https://formsubmit.co/gmw72@yahoo.com" method="POST" enctype="multipart/form-data">
+                <!-- Hidden fields configure the submission: disable CAPTCHA and set a subject -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New resume service request from Premier Resume Service">
+                <!-- Form fields with appropriate autocomplete attributes -->
                 <div class="form-group">
                     <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" autocomplete="tel">
                 </div>
                 <div class="form-group">
                     <label for="job-title">Target Job Title *</label>
-                    <input type="text" id="job-title" name="job_title" required>
+                    <input type="text" id="job-title" name="job_title" autocomplete="organization-title" required>
                 </div>
                 <div class="form-group">
                     <label for="industry">Industry / Career Level *</label>
-                    <input type="text" id="industry" name="industry" required>
+                    <input type="text" id="industry" name="industry" autocomplete="organization" required>
                 </div>
                 <div class="form-group">
                     <label for="resume">Current Resume (optional: PDF, DOC or DOCX)</label>
@@ -193,15 +186,11 @@
     <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Premier Resume Services. All rights reserved.</p>
+            <p>© 2025 Premier Resume Services. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Snipcart JavaScript and cart container (replace YOUR_PUBLIC_API_KEY with your Snipcart key) -->
+    <!-- Snipcart JavaScript and cart container -->
     <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
-    <div id="snipcart"
-         data-config-modal-style="side"
-     data-api-key="MTZkYTZkMDMtNmU1Yi00YjAzLTkyMjItYmIxNTYyMTZmNTEyNjM5MDA4MTAwODQ2MzMzNDMw"
-         hidden></div>
+    <div id="snipcart" data-config-modal-style="side" data-api-key="MTZkYTZkMDMtNmU1Yi00YjAzLTkyMjItYmIxNTYyMTZmNTEyNjM5MDA4MTAwODQ2MzMzNDMw" hidden></div>
 </body>
-</html>
